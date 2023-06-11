@@ -34,4 +34,12 @@
         URL: tasks.example.com
 #task variables can't access by other tasks
 
+#varibale from roles
 
+- name: Variable from Roles
+  hosts: all
+  vars:
+    URL_Play: play.example.com
+
+  roles:
+    - sample
