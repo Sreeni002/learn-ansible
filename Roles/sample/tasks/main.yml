@@ -1,5 +1,5 @@
 - name: Print Hello World
   ansible.builtin.debug:
-    msg: Hello From Role Sample
+    msg: Hello From Role sample
 
 
