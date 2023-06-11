@@ -15,7 +15,7 @@
 
 - name: Load variables from a file
   hosts: all
-  vars_files:
+  vars_file:
     - exvars.yml
   tasks:
     - name: Print URL
