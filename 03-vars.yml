@@ -13,6 +13,17 @@
  # msg: {{ URL }} <-- This require quotes
 #msg: URL - {{ URL }}  <-- This doesn't require quotes
 
+- name: Load variables from a file
+  hosts: all
+  vars_file:
+    - exvars.yml
+  tasks:
+    - name: Print URL
+      ansible.builtin.debug:
+        msg: URL - {{ URL }}
+
+#varfile doesn't suport task level and it supports only play level
+
 - name: Demo on Ply level variables
   hosts: all
   tasks:
