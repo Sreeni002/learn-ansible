@@ -36,3 +36,14 @@
     PLAY_URL : Play.Role.example.com
   roles:
     - sample
+
+#How to store output of a task into a variable
+- name: Demo on output variable
+  hosts: all
+  tasks:
+    - name: Run uptime shell command
+      ansible.builtin.shell: uptime
+      register: output
+    - name: Print output
+      ansible.builtin.debug:
+        msg: "{{ output }}"
