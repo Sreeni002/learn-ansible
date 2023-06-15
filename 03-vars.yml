@@ -28,3 +28,11 @@
     - name: Print URL from file var file
       ansible.builtin.debug:
         msg: URL - {{ URL }}
+
+#variable from roles
+- name: Variable from roles
+  hosts: all
+  vars:
+    PLAY_URL : Play.Role.example.com
+  roles:
+    - sample
