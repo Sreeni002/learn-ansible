@@ -17,3 +17,14 @@
         msg: URL - {{ URL }}
       vars:
         URL: playtask.example.com
+
+#Load variables from a file
+
+- name: Load variables from a file
+  hosts: all
+  vars_files:
+    - exvars.yml
+  tasks:
+    - name: Print URL from file var file
+      ansible.builtin.debug:
+        msg: URL - {{ URL }}
